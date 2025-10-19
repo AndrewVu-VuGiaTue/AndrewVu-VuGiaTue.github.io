@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Gia Tue Vu</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: { primary: '#B31B1B', secondary: '#C00404', accent: '#653819', brownSeal: '#4E3629' },
+fontFamily: { 'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], 'display': ['Playfair Display', 'Georgia', 'serif'], 'script': ['Pacifico', 'cursive'] }
+}
+}
+}
+</script>
+<style>
+html { scroll-behavior: smooth; }
+.gradient-text { background: linear-gradient(135deg, #B31B1B 0%, #C00404 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { animation: fadeIn 1s ease-out forwards; }
+.scroll-reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+.scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+/* Language Switcher */
+.lang-dropdown { position: relative; }
+.lang-menu {
+position: absolute; top: 100%; right: 0; margin-top: 0.5rem;
+background: white; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+min-width: 160px; opacity: 0; visibility: hidden;
+transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000;
+}
+.lang-dropdown:hover .lang-menu,
+.lang-menu:hover { opacity: 1; visibility: visible; transform: translateY(0); }
+.lang-option {
+display: flex; align-items: center; padding: 0.75rem 1rem;
+cursor: pointer; transition: background-color 0.2s ease;
+color: #374151; font-size: 0.875rem;
+}
+.lang-option:first-child { border-radius: 8px 8px 0 0; }
+.lang-option:last-child { border-radius: 0 0 8px 8px; }
+.lang-option:hover { background-color: #F3F4F6; }
+.lang-option.active { background-color: #FEE2E2; color: #B31B1B; font-weight: 600; }
+.lang-flag { width: 20px; height: 20px; margin-right: 0.5rem; font-size: 1.25rem; }
+</style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+<!-- Top Toolbar -->
+<div class="bg-gray-900 text-white py-2 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center space-x-6">
+<div class="flex items-center">
+<i class="ri-mail-line mr-2"></i>
+<span>vgt2800@gmail.com</span>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line mr-2"></i>
+<span>(+84) 914 654 745</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-sm"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="w-8 h-8 bg-gray-700 text-white rounded flex items-center justify-center hover:bg-gray-600 transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-sm"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-sm"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="w-8 h-8 bg-teal-600 text-white rounded flex items-center justify-center hover:bg-teal-700 transition-colors" aria-label="Kaggle">
+<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>Download CV
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<header class="bg-white shadow-sm sticky top-10 z-40">
+<nav class="px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<a href="index.html" class="font-script text-2xl text-primary hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<div class="hidden md:flex items-center space-x-6">
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Home</a>
+<a href="about.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">About Me</a>
+<a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Honors & Awards</a>
+<a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Projects</a>
+<a href="activities.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Extracurricular Activities</a>
+<a href="blog.html" class="text-primary font-semibold">Blog</a>
+<a href="contact.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Contact</a>
+<!-- Language Switcher -->
+<div class="lang-dropdown relative">
+<button class="flex items-center space-x-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium">
+<i class="ri-global-line text-xl"></i>
+<span id="currentLang">EN</span>
+<i class="ri-arrow-down-s-line text-sm"></i>
+</button>
+<div class="lang-menu">
+<div class="lang-option" onclick="switchLanguage('en')">
+<span class="lang-flag">🇺🇸</span>
+<span>English</span>
+</div>
+<div class="lang-option" onclick="switchLanguage('vi')">
+<span class="lang-flag">🇻🇳</span>
+<span>Tiếng Việt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<!-- Hero -->
+<section class="py-20 bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center fade-in">
+<i class="ri-article-line text-8xl mb-6 opacity-90"></i>
+<h1 class="text-6xl md:text-7xl font-display font-bold mb-6">Blog & Insights</h1>
+<p class="text-xl md:text-2xl font-light max-w-3xl mx-auto opacity-90">Sharing my journey, experiences, and knowledge in tech</p>
+</div>
+</div>
+</section>
+
+<!-- Main Content -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Categories -->
+<div class="mb-12 text-center scroll-reveal">
+<div class="inline-flex flex-wrap gap-3 justify-center">
+<button class="px-6 py-2 bg-primary text-white rounded-full font-medium hover:bg-secondary transition-all">All Posts</button>
+<button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-all">Technology</button>
+<button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-all">Study Abroad</button>
+<button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-all">Life & Learning</button>
+</div>
+</div>
+
+<!-- Featured Post -->
+<div class="mb-16 scroll-reveal">
+<article class="bg-white rounded-2xl shadow-xl border-2 border-primary/10 overflow-hidden hover:shadow-2xl transition-all">
+<div class="md:flex">
+<div class="md:w-1/2 h-80 bg-gradient-to-br from-primary to-secondary"></div>
+<div class="md:w-1/2 p-8">
+<div class="inline-block px-4 py-1 bg-primary text-white text-sm font-medium rounded-full mb-4">Featured</div>
+<h2 class="text-3xl font-display font-bold mb-4">My Journey to AI: From Curiosity to Innovation</h2>
+<p class="text-gray-600 mb-6">Discover how a simple interest in technology evolved into winning international competitions and building impactful AI solutions...</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-calendar-line mr-2"></i>
+<span>December 2024</span>
+<span class="mx-3">•</span>
+<span>5 min read</span>
+</div>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read more →</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Blog Grid -->
+<div class="grid md:grid-cols-3 gap-8 scroll-reveal">
+<!-- Post 1 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Technology</div>
+<h3 class="text-xl font-bold mb-2">Building My First AI Chatbot</h3>
+<p class="text-gray-600 text-sm mb-4">A step-by-step guide to creating an intelligent chatbot using NLP and machine learning...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Nov 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+
+<!-- Post 2 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Study Abroad</div>
+<h3 class="text-xl font-bold mb-2">Tips for Cornell & Brown Applications</h3>
+<p class="text-gray-600 text-sm mb-4">Essential advice for international students applying to top US universities...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Oct 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+
+<!-- Post 3 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Life & Learning</div>
+<h3 class="text-xl font-bold mb-2">Balancing Academics and Passion</h3>
+<p class="text-gray-600 text-sm mb-4">How I manage schoolwork, competitions, and personal projects effectively...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Sep 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+
+<!-- Post 4 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Technology</div>
+<h3 class="text-xl font-bold mb-2">Web Development Best Practices</h3>
+<p class="text-gray-600 text-sm mb-4">Modern techniques for building fast, responsive, and beautiful websites...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Aug 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+
+<!-- Post 5 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Study Abroad</div>
+<h3 class="text-xl font-bold mb-2">Preparing for the SAT & IELTS</h3>
+<p class="text-gray-600 text-sm mb-4">My study strategies and resources that helped me ace these important exams...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Jul 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+
+<!-- Post 6 -->
+<article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
+<div class="h-48 bg-gradient-to-br from-rose-500 to-pink-600"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-medium mb-2">Life & Learning</div>
+<h3 class="text-xl font-bold mb-2">Lessons from Competition Wins</h3>
+<p class="text-gray-600 text-sm mb-4">What winning international competitions taught me about perseverance and teamwork...</p>
+<div class="flex items-center justify-between text-sm text-gray-500">
+<span>Jun 2024</span>
+<a href="#" class="text-primary hover:text-secondary font-medium">Read →</a>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Coming Soon -->
+<div class="mt-16 text-center scroll-reveal">
+<div class="inline-block p-8 bg-gray-50 rounded-2xl">
+<i class="ri-quill-pen-line text-5xl text-primary mb-4"></i>
+<h3 class="text-2xl font-display font-bold mb-2">More Posts Coming Soon</h3>
+<p class="text-gray-600">I regularly share insights about tech, education, and personal growth</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<i class="ri-mail-line text-6xl mb-6 opacity-90"></i>
+<h2 class="text-4xl font-display font-bold mb-6">Stay Updated</h2>
+<p class="text-xl mb-8 opacity-90">Get notified when I publish new blog posts</p>
+<div class="max-w-md mx-auto">
+<div class="flex gap-3">
+<input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+<button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-all font-medium whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-8">
+<div>
+<a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-xl"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-xl"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Kaggle">
+<svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Quick Links</h3>
+<div class="space-y-2">
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Contact</h3>
+<div class="space-y-2 text-gray-400">
+<p>vgt2800@gmail.com</p>
+<p>(+84) 914 654 745</p>
+<p>Thanh Xuan, Hanoi, Vietnam</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) entry.target.classList.add('revealed');
+});
+}, { threshold: 0.1 });
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>
+

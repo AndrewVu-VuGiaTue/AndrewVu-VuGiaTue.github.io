@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects - Gia Tue Vu</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B31B1B',
+secondary: '#C00404',
+accent: '#653819',
+brownSeal: '#4E3629'
+},
+fontFamily: {
+'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+'display': ['Playfair Display', 'Georgia', 'serif'],
+'script': ['Pacifico', 'cursive']
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.fade-in {
+animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-down {
+animation: fadeInDown 1s ease-out forwards;
+}
+
+.scroll-reveal {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+opacity: 1;
+transform: translateY(0);
+}
+
+.gradient-text {
+background: linear-gradient(135deg, #B31B1B 0%, #C00404 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+/* Language Switcher */
+.lang-dropdown {
+position: relative;
+}
+
+.lang-menu {
+position: absolute;
+top: 100%;
+right: 0;
+margin-top: 0.5rem;
+background: white;
+border-radius: 8px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+min-width: 160px;
+opacity: 0;
+visibility: hidden;
+transform: translateY(-10px);
+transition: all 0.3s ease;
+z-index: 1000;
+}
+
+.lang-dropdown:hover .lang-menu,
+.lang-menu:hover {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.lang-option {
+display: flex;
+align-items: center;
+padding: 0.75rem 1rem;
+cursor: pointer;
+transition: background-color 0.2s ease;
+color: #374151;
+font-size: 0.875rem;
+}
+
+.lang-option:first-child {
+border-radius: 8px 8px 0 0;
+}
+
+.lang-option:last-child {
+border-radius: 0 0 8px 8px;
+}
+
+.lang-option:hover {
+background-color: #F3F4F6;
+}
+
+.lang-option.active {
+background-color: #FEE2E2;
+color: #B31B1B;
+font-weight: 600;
+}
+
+.lang-flag {
+width: 20px;
+height: 20px;
+margin-right: 0.5rem;
+font-size: 1.25rem;
+}
+</style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+<!-- Top Toolbar -->
+<div class="bg-gray-900 text-white py-2 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center space-x-6">
+<div class="flex items-center">
+<i class="ri-mail-line mr-2"></i>
+<span>vgt2800@gmail.com</span>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line mr-2"></i>
+<span>(+84) 914 654 745</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-sm"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="w-8 h-8 bg-gray-700 text-white rounded flex items-center justify-center hover:bg-gray-600 transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-sm"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-sm"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="w-8 h-8 bg-teal-600 text-white rounded flex items-center justify-center hover:bg-teal-700 transition-colors" aria-label="Kaggle">
+<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>Download CV
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<header class="bg-white shadow-sm sticky top-10 z-40">
+<nav class="px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<a href="index.html" class="font-script text-2xl text-primary fade-in-down hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<div class="hidden md:flex items-center space-x-6 fade-in-down">
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Home</a>
+<a href="about.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">About Me</a>
+<a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Honors & Awards</a>
+<a href="projects.html" class="text-primary font-semibold">Projects</a>
+<a href="activities.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Extracurricular Activities</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Blog</a>
+<a href="contact.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Contact</a>
+<!-- Language Switcher -->
+<div class="lang-dropdown relative">
+<button class="flex items-center space-x-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium">
+<i class="ri-global-line text-xl"></i>
+<span id="currentLang">EN</span>
+<i class="ri-arrow-down-s-line text-sm"></i>
+</button>
+<div class="lang-menu">
+<div class="lang-option" onclick="switchLanguage('en')">
+<span class="lang-flag">🇺🇸</span>
+<span>English</span>
+</div>
+<div class="lang-option" onclick="switchLanguage('vi')">
+<span class="lang-flag">🇻🇳</span>
+<span>Tiếng Việt</span>
+</div>
+</div>
+</div>
+</div>
+<button class="md:hidden w-8 h-8 flex items-center justify-center fade-in-down">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h1 class="text-6xl md:text-7xl font-display font-bold mb-6 gradient-text" data-i18n="projects.hero.title">My Projects</h1>
+<p class="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto" data-i18n="projects.hero.subtitle">
+A showcase of my technical projects and creative work during my academic journey
+</p>
+</div>
+</div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Featured Projects -->
+<div class="mb-16 scroll-reveal">
+<h2 class="text-4xl font-display font-bold mb-8 gradient-text" data-i18n="projects.featured.title">Featured Projects</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1: E-commerce Platform -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600">
+<img src="https://readdy.ai/api/search-image?query=Modern%20e-commerce%20website%20interface%20on%20laptop%20screen%2C%20clean%20product%20catalog%20design%2C%20shopping%20cart%20functionality%2C%20professional%20web%20development%20project%2C%20blue%20and%20white%20color%20scheme%2C%20minimalist%20UI%20design&width=400&height=300&seq=project001&orientation=landscape" alt="E-commerce Platform" class="w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3" data-i18n="projects.project1.title">E-commerce Platform</h3>
+<p class="text-gray-600 mb-4 text-sm" data-i18n="projects.project1.description">Complete e-commerce platform with payment features, product management and order processing.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">React</span>
+<span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Node.js</span>
+<span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">MongoDB</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-secondary transition-colors text-sm font-medium">
+<i class="ri-external-link-line mr-2"></i><span data-i18n="projects.viewDemo">View Demo</span>
+</button>
+<button class="flex-1 border-2 border-primary text-primary py-2 px-4 !rounded-button hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+<i class="ri-github-line mr-2"></i><span data-i18n="projects.viewCode">Code</span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Project 2: AI Chatbot -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden bg-gradient-to-br from-yellow-500 to-red-600">
+<img src="https://readdy.ai/api/search-image?query=AI%20chatbot%20interface%20with%20conversation%20bubbles%2C%20modern%20chat%20application%20design%2C%20machine%20learning%20powered%20assistant%2C%20clean%20messaging%20UI%20with%20blue%20accents%2C%20artificial%20intelligence%20project&width=400&height=300&seq=project002&orientation=landscape" alt="AI Chatbot" class="w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3" data-i18n="projects.project2.title">AI Chatbot Assistant</h3>
+<p class="text-gray-600 mb-4 text-sm" data-i18n="projects.project2.description">Intelligent AI assistant using NLP to understand and respond to user questions naturally.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Python</span>
+<span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-medium">TensorFlow</span>
+<span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-medium">Flask</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-secondary transition-colors text-sm font-medium">
+<i class="ri-external-link-line mr-2"></i><span data-i18n="projects.viewDemo">View Demo</span>
+</button>
+<button class="flex-1 border-2 border-primary text-primary py-2 px-4 !rounded-button hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+<i class="ri-github-line mr-2"></i><span data-i18n="projects.viewCode">Code</span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Project 3: Task Manager -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden bg-gradient-to-br from-cyan-500 to-blue-600">
+<img src="https://readdy.ai/api/search-image?query=Mobile%20task%20management%20app%20interface%2C%20todo%20list%20application%20with%20clean%20design%2C%20productivity%20app%20screenshots%2C%20modern%20mobile%20UI%20with%20organized%20task%20cards%2C%20blue%20and%20white%20theme&width=400&height=300&seq=project003&orientation=landscape" alt="Task Manager App" class="w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3" data-i18n="projects.project3.title">Task Manager Mobile App</h3>
+<p class="text-gray-600 mb-4 text-sm" data-i18n="projects.project3.description">Task management app with user-friendly interface, multi-device sync and smart notifications.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full font-medium">React Native</span>
+<span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">Firebase</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">TypeScript</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2 px-4 !rounded-button hover:bg-secondary transition-colors text-sm font-medium">
+<i class="ri-external-link-line mr-2"></i><span data-i18n="projects.viewDemo">View Demo</span>
+</button>
+<button class="flex-1 border-2 border-primary text-primary py-2 px-4 !rounded-button hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+<i class="ri-github-line mr-2"></i><span data-i18n="projects.viewCode">Code</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- More Projects Coming Soon -->
+<div class="text-center py-20 scroll-reveal">
+<div class="inline-block p-8 bg-gray-50 rounded-2xl">
+<i class="ri-code-box-line text-6xl text-primary mb-4"></i>
+<h3 class="text-2xl font-display font-bold mb-2" data-i18n="projects.more.title">More Projects Coming Soon</h3>
+<p class="text-gray-600" data-i18n="projects.more.subtitle">I'm constantly working on new projects. Stay tuned!</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-primary to-secondary scroll-reveal">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6" data-i18n="projects.cta.title">
+Let's Build Something Amazing Together
+</h2>
+<p class="text-xl text-white/90 mb-8" data-i18n="projects.cta.subtitle">
+Have a project idea or want to collaborate? I'd love to hear from you.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="contact.html" class="bg-white text-primary py-3 px-8 !rounded-button hover:bg-gray-100 transition-colors font-semibold inline-flex items-center justify-center">
+<i class="ri-mail-line mr-2"></i>
+<span data-i18n="projects.cta.contact">Get in Touch</span>
+</a>
+<a href="index.html" class="border-2 border-white text-white py-3 px-8 !rounded-button hover:bg-white hover:text-primary transition-colors font-semibold inline-flex items-center justify-center">
+<i class="ri-home-line mr-2"></i>
+<span data-i18n="projects.cta.home">Back to Home</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-8">
+<div>
+<a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-xl"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-xl"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Kaggle">
+<svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Quick Links</h3>
+<div class="space-y-2">
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Contact</h3>
+<div class="space-y-2 text-gray-400">
+<p>vgt2800@gmail.com</p>
+<p>(+84) 914 654 745</p>
+<p>Thanh Xuan, Hanoi, Vietnam</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Scroll reveal animation
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('revealed');
+}
+});
+}, observerOptions);
+
+const revealElements = document.querySelectorAll('.scroll-reveal');
+revealElements.forEach(el => observer.observe(el));
+});
+</script>
+
+<script id="i18n-system">
+// Translation data
+const translations = {
+en: {
+nav: {
+backHome: "Back to Home",
+about: "About",
+contact: "Contact"
+},
+projects: {
+hero: {
+title: "My Projects",
+subtitle: "A showcase of my technical projects and creative work during my academic journey"
+},
+featured: {
+title: "Featured Projects"
+},
+project1: {
+title: "E-commerce Platform",
+description: "Complete e-commerce platform with payment features, product management and order processing."
+},
+project2: {
+title: "AI Chatbot Assistant",
+description: "Intelligent AI assistant using NLP to understand and respond to user questions naturally."
+},
+project3: {
+title: "Task Manager Mobile App",
+description: "Task management app with user-friendly interface, multi-device sync and smart notifications."
+},
+viewDemo: "View Demo",
+viewCode: "Code",
+more: {
+title: "More Projects Coming Soon",
+subtitle: "I'm constantly working on new projects. Stay tuned!"
+},
+cta: {
+title: "Let's Build Something Amazing Together",
+subtitle: "Have a project idea or want to collaborate? I'd love to hear from you.",
+contact: "Get in Touch",
+home: "Back to Home"
+}
+}
+},
+vi: {
+nav: {
+backHome: "Quay về Trang chủ",
+about: "Giới thiệu",
+contact: "Liên hệ"
+},
+projects: {
+hero: {
+title: "Dự án của tôi",
+subtitle: "Tổng hợp các dự án kỹ thuật và sáng tạo trong hành trình học tập của tôi"
+},
+featured: {
+title: "Dự án nổi bật"
+},
+project1: {
+title: "Nền tảng Thương mại điện tử",
+description: "Nền tảng thương mại điện tử hoàn chỉnh với tính năng thanh toán, quản lý sản phẩm và xử lý đơn hàng."
+},
+project2: {
+title: "Trợ lý AI Chatbot",
+description: "Trợ lý AI thông minh sử dụng NLP để hiểu và trả lời câu hỏi của người dùng một cách tự nhiên."
+},
+project3: {
+title: "Ứng dụng Quản lý Công việc",
+description: "Ứng dụng quản lý công việc với giao diện thân thiện, đồng bộ đa thiết bị và thông báo thông minh."
+},
+viewDemo: "Xem Demo",
+viewCode: "Mã nguồn",
+more: {
+title: "Thêm dự án sắp ra mắt",
+subtitle: "Tôi liên tục làm việc trên các dự án mới. Hãy theo dõi!"
+},
+cta: {
+title: "Hãy cùng nhau xây dựng điều tuyệt vời",
+subtitle: "Có ý tưởng dự án hoặc muốn hợp tác? Tôi rất mong được nghe từ bạn.",
+contact: "Liên hệ ngay",
+home: "Về Trang chủ"
+}
+}
+}
+};
+
+function getTranslation(obj, path) {
+return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+function switchLanguage(lang) {
+localStorage.setItem('preferredLanguage', lang);
+document.documentElement.lang = lang;
+  
+const currentLangSpan = document.getElementById('currentLang');
+if (currentLangSpan) {
+currentLangSpan.textContent = lang.toUpperCase();
+}
+  
+const elements = document.querySelectorAll('[data-i18n]');
+elements.forEach(element => {
+const key = element.getAttribute('data-i18n');
+const translation = getTranslation(translations[lang], key);
+    
+if (translation) {
+if (translation.includes('<')) {
+element.innerHTML = translation;
+} else {
+element.textContent = translation;
+}
+}
+});
+  
+document.querySelectorAll('.lang-option').forEach(option => {
+option.classList.remove('active');
+});
+  
+const selectedOption = Array.from(document.querySelectorAll('.lang-option'))
+.find(option => option.getAttribute('onclick').includes(`'${lang}'`));
+  
+if (selectedOption) {
+selectedOption.classList.add('active');
+}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+switchLanguage(savedLang);
+});
+</script>
+</body>
+</html>
+

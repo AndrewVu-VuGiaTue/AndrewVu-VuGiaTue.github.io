@@ -112,6 +112,27 @@ A modern, bilingual personal portfolio website with smooth animations and profes
 
 ---
 
+## 📂 Projects Page
+
+The website features a **dedicated projects page** (`projects.html`) that opens in a new tab:
+
+- **Separate Page**: Click "Projects" in navigation to open the projects showcase in a new tab
+- **Focused View**: Dedicated space to display all your technical projects
+- **Bilingual Support**: Full English/Vietnamese translation support
+- **Enhanced Cards**: Beautiful project cards with gradient overlays
+- **Interactive**: Hover effects, animations, and scroll reveals
+- **Quick Navigation**: Easy access back to home page from navigation bar
+
+### Features:
+- ✅ Grid layout with responsive design
+- ✅ Project cards with images, descriptions, and tech stacks
+- ✅ "View Demo" and "Code" buttons for each project
+- ✅ "More projects coming soon" section
+- ✅ Same styling and animations as main page
+- ✅ Language switcher with localStorage persistence
+
+---
+
 ## 🎨 Animation Features
 
 ### 1. Hero Section Animations
@@ -148,11 +169,18 @@ A modern, bilingual personal portfolio website with smooth animations and profes
 
 ```
 D:\Personal Website\
-├── vugiatue.html              # Main HTML file
+├── vugiatue.html              # Homepage (Hero + Skills)
+├── about.html                 # About Me page
+├── projects.html              # Projects showcase
+├── awards.html                # Honors & Awards page
+├── blog.html                  # Blog & Insights
+├── contact.html               # Contact form
 ├── README.md                  # This file
 ├── CHANGELOG.md               # Version history
 ├── LANGUAGE-GUIDE.md          # Language feature guide
-└── HOW-TO-TEST.md             # Testing instructions
+├── HOW-TO-TEST.md             # Testing instructions
+├── PAGE-CREATION-GUIDE.md     # Guide for creating pages
+└── IMPLEMENTATION-SUMMARY.md  # Complete setup summary
 ```
 
 ---

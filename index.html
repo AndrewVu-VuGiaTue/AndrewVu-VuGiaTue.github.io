@@ -1,0 +1,814 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gia Tue Vu - Computer Science Student</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B31B1B',      // Cornell Carnelian Red
+secondary: '#C00404',    // Brown Red
+accent: '#653819',       // Cornell Brown
+brownSeal: '#4E3629'     // Brown Seal Brown
+},
+fontFamily: {
+'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+'display': ['Playfair Display', 'Georgia', 'serif'],
+'script': ['Pacifico', 'cursive']
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+
+/* Smooth scroll behavior */
+html {
+scroll-behavior: smooth;
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(10px);
+}
+}
+
+@keyframes typing {
+from {
+width: 0;
+}
+to {
+width: 100%;
+}
+}
+
+@keyframes blink {
+50% {
+border-color: transparent;
+}
+}
+
+@keyframes float {
+0%, 100% {
+transform: translateY(0px);
+}
+50% {
+transform: translateY(-20px);
+}
+}
+
+.fade-in {
+animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+animation: float 3s ease-in-out infinite;
+}
+
+.fade-in-down {
+animation: fadeInDown 1s ease-out forwards;
+}
+
+.bounce {
+animation: bounce 2s ease-in-out infinite;
+}
+
+/* Navigation transparency effect */
+.nav-transparent {
+background-color: transparent !important;
+box-shadow: none !important;
+}
+
+.nav-solid {
+background-color: white !important;
+box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1) !important;
+transition: all 0.3s ease;
+}
+
+/* Parallax effect */
+.parallax {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* Hero section animations */
+.hero-content > * {
+opacity: 0;
+}
+
+.hero-content.animated > *:nth-child(1) {
+animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
+.hero-content.animated > *:nth-child(2) {
+animation: fadeIn 1s ease-out 0.4s forwards;
+}
+
+.hero-content.animated > *:nth-child(3) {
+animation: fadeIn 1s ease-out 0.6s forwards;
+}
+
+.hero-content.animated > *:nth-child(4) {
+animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+/* Scroll reveal animation */
+.scroll-reveal {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Gradient text effect */
+.gradient-text {
+background: linear-gradient(135deg, #B31B1B 0%, #C00404 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+/* Enhanced button hover effects */
+.btn-hover {
+position: relative;
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+.btn-hover::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+transition: all 0.6s ease;
+}
+
+.btn-hover:hover::before {
+left: 100%;
+}
+
+/* Language Switcher */
+.lang-dropdown {
+position: relative;
+}
+
+.lang-menu {
+position: absolute;
+top: 100%;
+right: 0;
+margin-top: 0.5rem;
+background: white;
+border-radius: 8px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+min-width: 160px;
+opacity: 0;
+visibility: hidden;
+transform: translateY(-10px);
+transition: all 0.3s ease;
+z-index: 1000;
+}
+
+.lang-dropdown:hover .lang-menu,
+.lang-menu:hover {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.lang-option {
+display: flex;
+align-items: center;
+padding: 0.75rem 1rem;
+cursor: pointer;
+transition: background-color 0.2s ease;
+color: #374151;
+font-size: 0.875rem;
+}
+
+.lang-option:first-child {
+border-radius: 8px 8px 0 0;
+}
+
+.lang-option:last-child {
+border-radius: 0 0 8px 8px;
+}
+
+.lang-option:hover {
+background-color: #F3F4F6;
+}
+
+.lang-option.active {
+background-color: #FEE2E2;
+color: #B31B1B;
+font-weight: 600;
+}
+
+.lang-flag {
+width: 20px;
+height: 20px;
+margin-right: 0.5rem;
+font-size: 1.25rem;
+}
+</style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+<!-- Top Toolbar -->
+<div class="bg-gray-900 text-white py-2 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center space-x-6">
+<div class="flex items-center">
+<i class="ri-mail-line mr-2"></i>
+<span>vgt2800@gmail.com</span>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line mr-2"></i>
+<span>(+84) 914 654 745</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-sm"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="w-8 h-8 bg-gray-700 text-white rounded flex items-center justify-center hover:bg-gray-600 transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-sm"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="w-8 h-8 bg-blue-600 text-white rounded flex items-center justify-center hover:bg-blue-700 transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-sm"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="w-8 h-8 bg-teal-600 text-white rounded flex items-center justify-center hover:bg-teal-700 transition-colors" aria-label="Kaggle">
+<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>Download CV
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Navigation -->
+<header id="mainNav" class="nav-transparent sticky top-10 z-40 transition-all duration-300">
+<nav class="px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<a href="index.html" class="font-script text-2xl text-primary fade-in-down hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<div class="hidden md:flex items-center space-x-8 fade-in-down">
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.home">Home</a>
+<a href="about.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.contact">Contact</a>
+<!-- Language Switcher -->
+<div class="lang-dropdown relative">
+<button class="flex items-center space-x-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium">
+<i class="ri-global-line text-xl"></i>
+<span id="currentLang">EN</span>
+<i class="ri-arrow-down-s-line text-sm"></i>
+</button>
+<div class="lang-menu">
+<div class="lang-option" onclick="switchLanguage('en')">
+<span class="lang-flag">ðŸ‡ºðŸ‡¸</span>
+<span>English</span>
+</div>
+<div class="lang-option" onclick="switchLanguage('vi')">
+<span class="lang-flag">ðŸ‡»ðŸ‡³</span>
+<span>Tiáº¿ng Viá»‡t</span>
+</div>
+</div>
+</div>
+</div>
+<button class="md:hidden w-8 h-8 flex items-center justify-center fade-in-down">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
+<!-- Animated gradient orbs -->
+<div class="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-full blur-3xl animate-pulse"></div>
+<div class="absolute bottom-20 -right-20 w-96 h-96 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+<div class="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+
+<div class="relative w-full px-6 py-20 z-10">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Left: Content -->
+<div class="space-y-8 hero-content">
+<div class="inline-block">
+<span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20">
+👋 Welcome to my portfolio
+</span>
+</div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-tight">
+Hi, I'm <span class="gradient-text">Gia Tue Vu</span>
+</h1>
+<div class="space-y-2">
+<p class="text-2xl md:text-3xl text-gray-700 font-medium" data-i18n="hero.role">
+Computer Science Student
+</p>
+<p class="text-xl text-gray-600 font-light" data-i18n="hero.subtitle">
+Passionate about programming, AI technology, and creating positive impacts through code
+</p>
+</div>
+<div class="flex items-center gap-4 text-sm text-gray-600">
+<div class="flex items-center gap-2">
+<i class="ri-map-pin-line text-primary"></i>
+<span>Hanoi, Vietnam</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-graduation-cap-line text-primary"></i>
+<span>VNU High School</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<a href="projects.html" class="btn-hover bg-primary text-white px-8 py-4 !rounded-button hover:bg-secondary transition-all duration-300 whitespace-nowrap font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
+<i class="ri-folder-line mr-2"></i>
+<span data-i18n="hero.viewProjects">View Projects</span>
+</a>
+<a href="contact.html" class="btn-hover border-2 border-primary text-primary px-8 py-4 !rounded-button hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
+<i class="ri-mail-line mr-2"></i>
+<span data-i18n="hero.getInTouch">Get in Touch</span>
+</a>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-1">10+</div>
+<div class="text-sm text-gray-600" data-i18n="hero.stats.projects">Projects</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-1">5+</div>
+<div class="text-sm text-gray-600" data-i18n="hero.stats.technologies">Technologies</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-1">3+</div>
+<div class="text-sm text-gray-600" data-i18n="hero.stats.awards">Awards</div>
+</div>
+</div>
+</div>
+
+<!-- Right: Image -->
+<div class="relative lg:block hidden">
+<div class="relative z-10">
+<div class="w-full aspect-square max-w-md mx-auto relative">
+<!-- Main image container -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-3xl transform rotate-6 opacity-20"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-accent to-brownSeal rounded-3xl transform -rotate-6 opacity-20"></div>
+<div class="relative bg-white rounded-3xl p-4 shadow-2xl">
+<img src="https://static.readdy.ai/image/463e20087823e41977ed319075af2fbf/41a55e653710a7f0fda8e5db4410f3cb.png" alt="Gia Tue Vu" class="w-full h-full object-cover rounded-2xl">
+</div>
+<!-- Floating elements -->
+<div class="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float">
+<i class="ri-code-s-slash-line text-3xl text-primary"></i>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-float" style="animation-delay: 1s;">
+<i class="ri-palette-line text-3xl text-secondary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bounce z-10">
+<a href="#skills" class="flex flex-col items-center text-primary hover:text-secondary transition-colors">
+<i class="ri-arrow-down-line text-3xl"></i>
+</a>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-20 bg-gradient-to-b from-white to-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 scroll-reveal">
+<h2 class="text-5xl font-display font-bold mb-4 gradient-text" data-i18n="skills.title">Skills & Technologies</h2>
+<p class="text-xl text-gray-600 font-light" data-i18n="skills.subtitle">Technologies I work with and continuously learning</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">
+<!-- Programming Languages Card -->
+<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<i class="ri-code-s-slash-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Programming</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">Python</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">Java</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">JavaScript</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">C++</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">SQL</span>
+</div>
+</div>
+<!-- Web Development Card -->
+<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-gradient-to-br from-accent to-brownSeal rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<i class="ri-global-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Web Dev</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">React</span>
+<span class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">Node.js</span>
+<span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-200 hover:bg-purple-100 transition-colors">MongoDB</span>
+<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">HTML/CSS</span>
+<span class="px-4 py-2 bg-cyan-50 text-cyan-700 rounded-full text-sm font-medium border border-cyan-200 hover:bg-cyan-100 transition-colors">Tailwind</span>
+</div>
+</div>
+<!-- AI & Machine Learning Card -->
+<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<i class="ri-brain-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800">AI & ML</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">TensorFlow</span>
+<span class="px-4 py-2 bg-red-50 text-red-700 rounded-full text-sm font-medium border border-red-200 hover:bg-red-100 transition-colors">PyTorch</span>
+<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">Scikit-learn</span>
+<span class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">Pandas</span>
+<span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-200 hover:bg-purple-100 transition-colors">NumPy</span>
+</div>
+</div>
+
+<!-- Tools & Others Card -->
+<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-gradient-to-br from-primary/80 to-accent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<i class="ri-tools-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Tools</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-200 transition-colors">Git</span>
+<span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-200 transition-colors">GitHub</span>
+<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">VS Code</span>
+<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">Jupyter</span>
+<span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium border border-indigo-200 hover:bg-indigo-100 transition-colors">Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-8">
+<div>
+<a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
+<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="https://github.com/AndrewVu-VuGiaTue" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+<i class="ri-github-fill text-xl"></i>
+</a>
+<a href="https://www.facebook.com/giatue.a/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+<i class="ri-facebook-fill text-xl"></i>
+</a>
+<a href="https://www.kaggle.com/giatuv" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Kaggle">
+<svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+</svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Quick Links</h3>
+<div class="space-y-2">
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Contact</h3>
+<div class="space-y-2 text-gray-400">
+<p>vgt2800@gmail.com</p>
+<p>(+84) 914 654 745</p>
+<p>Thanh Xuan, Hanoi, Vietnam</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script id="hero-animations">
+// Hero content animation on load
+document.addEventListener('DOMContentLoaded', function() {
+const heroContent = document.querySelector('.hero-content');
+if (heroContent) {
+setTimeout(() => {
+heroContent.classList.add('animated');
+}, 100);
+}
+
+// Navigation transparency on scroll
+const mainNav = document.getElementById('mainNav');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+// Change navigation background on scroll
+if (scrollTop > 100) {
+mainNav.classList.remove('nav-transparent');
+mainNav.classList.add('nav-solid');
+} else {
+mainNav.classList.remove('nav-solid');
+mainNav.classList.add('nav-transparent');
+}
+
+lastScrollTop = scrollTop;
+});
+
+// Scroll reveal animation
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('revealed');
+}
+});
+}, observerOptions);
+
+// Add scroll-reveal class to sections
+const sections = document.querySelectorAll('section:not(#home)');
+sections.forEach(section => {
+section.classList.add('scroll-reveal');
+observer.observe(section);
+});
+
+// Parallax effect for hero background (smooth on desktop only)
+if (window.innerWidth > 768) {
+window.addEventListener('scroll', function() {
+const scrolled = window.pageYOffset;
+const parallaxElement = document.querySelector('.parallax');
+if (parallaxElement && scrolled < window.innerHeight) {
+parallaxElement.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+}
+});
+}
+});
+</script>
+<script id="navigation-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('nav a[href^="#"], a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+if (targetElement) {
+const headerOffset = 120;
+const elementPosition = targetElement.getBoundingClientRect().top;
+const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+window.scrollTo({
+top: offsetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="contact-form">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('#contact form');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(form);
+const submitBtn = form.querySelector('button[type="submit"]');
+const originalText = submitBtn.innerHTML;
+submitBtn.innerHTML = '<i class="ri-loader-4-line mr-2 animate-spin"></i>Äang gá»­i...';
+submitBtn.disabled = true;
+setTimeout(() => {
+submitBtn.innerHTML = '<i class="ri-check-line mr-2"></i>ÄÃ£ gá»­i thÃ nh cÃ´ng!';
+submitBtn.classList.remove('bg-primary', 'hover:bg-secondary');
+submitBtn.classList.add('bg-green-500');
+setTimeout(() => {
+submitBtn.innerHTML = originalText;
+submitBtn.disabled = false;
+submitBtn.classList.remove('bg-green-500');
+submitBtn.classList.add('bg-primary', 'hover:bg-secondary');
+form.reset();
+}, 2000);
+}, 1500);
+});
+}
+});
+</script>
+<script id="i18n-system">
+// Translation data
+const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About Me",
+      awards: "Honors & Awards",
+      projects: "Projects",
+      activities: "Extracurricular Activities",
+      blog: "Blog",
+      contact: "Contact"
+    },
+    hero: {
+      greeting: "Greetings from Hanoi, Vietnam!",
+      subtitle: "Computer Science student at High School for Gifted Students, VNU University of Science. Passionate about programming, AI technology, and creating positive impacts on our community.",
+      exploreBtn: "<i class='ri-file-text-line mr-2'></i>Explore More",
+      contactBtn: "<i class='ri-mail-line mr-2'></i>Get in Touch",
+      scrollDown: "Scroll Down"
+    },
+    about: {
+      title: "About Me",
+      subtitle: "My journey of studying abroad and personal development",
+      paragraph1: "Hello! I'm Gia Tue Vu, currently an 11th-grade Computer Science student at High School for Gifted Students, VNU University of Science, Hanoi. With a passion for technology from an early age, I chose to specialize in Computer Science to develop deeper expertise in programming and computer science.",
+      paragraph2: "Throughout my academic journey, I have achieved excellent results with a GPA of 9.8/10 and completed AP courses in Computer Science and Mathematics with perfect scores. I am particularly interested in Machine Learning and AI, and aspire to pursue my dream of studying abroad to further develop my skills."
+    },
+    skills: {
+      title: "Skills & Technologies",
+      subtitle: "Technologies I've learned and used"
+    },
+    projects: {
+      title: "Featured Projects",
+      subtitle: "Projects I have completed during my academic journey"
+    },
+    blog: {
+      title: "Blog & Insights",
+      subtitle: "Sharing experiences and knowledge"
+    },
+    contact: {
+      title: "Get In Touch",
+      subtitle: "Let's connect and discuss technology"
+    }
+  },
+  vi: {
+    nav: {
+      home: "Trang chủ",
+      about: "Về tôi",
+      awards: "Giải thưởng",
+      projects: "Dự án",
+      activities: "Hoạt động ngoại khóa",
+      blog: "Blog",
+      contact: "Liên hệ"
+    },
+    hero: {
+      greeting: "Xin chÃ o tá»« HÃ  Ná»™i, Viá»‡t Nam!",
+      subtitle: "Há»c sinh chuyÃªn Tin há»c táº¡i TrÆ°á»ng THPT chuyÃªn Äáº¡i há»c Khoa há»c Tá»± nhiÃªn, HÃ  Ná»™i. Äam mÃª láº­p trÃ¬nh, cÃ´ng nghá»‡ AI vÃ  táº¡o ra nhá»¯ng tÃ¡c Ä‘á»™ng tÃ­ch cá»±c cho cá»™ng Ä‘á»“ng.",
+      exploreBtn: "<i class='ri-file-text-line mr-2'></i>KhÃ¡m phÃ¡ thÃªm",
+      contactBtn: "<i class='ri-mail-line mr-2'></i>LiÃªn há»‡ ngay",
+      scrollDown: "Cuá»™n xuá»‘ng"
+    },
+    about: {
+      title: "Giá»›i thiá»‡u vá» tÃ´i",
+      subtitle: "HÃ nh trÃ¬nh du há»c vÃ  phÃ¡t triá»ƒn báº£n thÃ¢n",
+      paragraph1: "Xin chÃ o! TÃ´i lÃ  Gia Tue Vu, hiá»‡n Ä‘ang lÃ  há»c sinh lá»›p 11 chuyÃªn Tin há»c táº¡i TrÆ°á»ng THPT chuyÃªn Äáº¡i há»c Khoa há»c Tá»± nhiÃªn, HÃ  Ná»™i. Vá»›i niá»m Ä‘am mÃª cÃ´ng nghá»‡ tá»« nhá», tÃ´i Ä‘Ã£ chá»n con Ä‘Æ°á»ng há»c chuyÃªn Tin Ä‘á»ƒ cÃ³ thá»ƒ phÃ¡t triá»ƒn sÃ¢u hÆ¡n trong lÄ©nh vá»±c láº­p trÃ¬nh vÃ  khoa há»c mÃ¡y tÃ­nh.",
+      paragraph2: "Trong quÃ¡ trÃ¬nh há»c táº­p, tÃ´i Ä‘Ã£ Ä‘áº¡t Ä‘Æ°á»£c nhiá»u thÃ nh tÃ­ch tá»‘t vá»›i GPA 9.8/10 vÃ  hoÃ n thÃ nh xuáº¥t sáº¯c cÃ¡c khÃ³a há»c AP vá» Computer Science vÃ  ToÃ¡n há»c. TÃ´i Ä‘áº·c biá»‡t quan tÃ¢m Ä‘áº¿n lÄ©nh vá»±c Machine Learning, AI vÃ  mong muá»‘n theo Ä‘uá»•i giáº¥c mÆ¡ du há»c Ä‘á»ƒ cÃ³ cÆ¡ há»™i phÃ¡t triá»ƒn hÆ¡n ná»¯a."
+    },
+    skills: {
+      title: "Ká»¹ nÄƒng & CÃ´ng nghá»‡",
+      subtitle: "Nhá»¯ng cÃ´ng nghá»‡ tÃ´i Ä‘Ã£ há»c vÃ  sá»­ dá»¥ng"
+    },
+    projects: {
+      title: "Dá»± Ã¡n ná»•i báº­t",
+      subtitle: "Nhá»¯ng dá»± Ã¡n tÃ´i Ä‘Ã£ thá»±c hiá»‡n trong quÃ¡ trÃ¬nh há»c táº­p"
+    },
+    blog: {
+      title: "Blog & BÃ i viáº¿t",
+      subtitle: "Chia sáº» kinh nghiá»‡m vÃ  kiáº¿n thá»©c"
+    },
+    contact: {
+      title: "LiÃªn há»‡ vá»›i tÃ´i",
+      subtitle: "HÃ£y káº¿t ná»‘i vÃ  tháº£o luáº­n vá» cÃ´ng nghá»‡"
+    }
+  }
+};
+
+// Get nested translation value
+function getTranslation(obj, path) {
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Switch language function
+function switchLanguage(lang) {
+  // Save preference to localStorage
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+  
+  // Update current language display
+  const currentLangSpan = document.getElementById('currentLang');
+  if (currentLangSpan) {
+    currentLangSpan.textContent = lang.toUpperCase();
+  }
+  
+  // Update all elements with data-i18n attribute
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = getTranslation(translations[lang], key);
+    
+    if (translation) {
+      // Check if translation contains HTML (like icons)
+      if (translation.includes('<')) {
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
+    }
+  });
+  
+  // Update active state in language menu
+  document.querySelectorAll('.lang-option').forEach(option => {
+    option.classList.remove('active');
+  });
+  
+  // Add active class to selected language
+  const selectedOption = Array.from(document.querySelectorAll('.lang-option'))
+    .find(option => option.getAttribute('onclick').includes(`'${lang}'`));
+  
+  if (selectedOption) {
+    selectedOption.classList.add('active');
+  }
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get saved language preference or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  
+  // Apply the language
+  switchLanguage(savedLang);
+});
+</script>
+</body>
+</html>
