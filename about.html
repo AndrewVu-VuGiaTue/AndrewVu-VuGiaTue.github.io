@@ -23,6 +23,18 @@ fontFamily: {
 'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 'display': ['Playfair Display', 'Georgia', 'serif'],
 'script': ['Pacifico', 'cursive']
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
 }
 }
 }
@@ -94,9 +106,9 @@ color: #374151; font-size: 0.875rem;
 <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
 </svg>
 </a>
-<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<a href="https://drive.google.com/uc?export=download&id=1W4qaHpJ-9GXTfVy4KH8r09h_AG8rTLRk" class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap inline-flex items-center" download>
 <i class="ri-download-line mr-2"></i>Download CV
-</button>
+</a>
 </div>
 </div>
 </div>
@@ -107,13 +119,13 @@ color: #374151; font-size: 0.875rem;
 <div class="max-w-7xl mx-auto flex items-center justify-between">
 <a href="index.html" class="font-script text-2xl text-primary hover:opacity-80 transition-opacity">Gia Tue Vu</a>
 <div class="hidden md:flex items-center space-x-6">
-<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Home</a>
-<a href="about.html" class="text-primary font-semibold">About Me</a>
-<a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Honors & Awards</a>
-<a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Projects</a>
-<a href="activities.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Extracurricular Activities</a>
-<a href="blog.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Blog</a>
-<a href="contact.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Contact</a>
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.home">Home</a>
+<a href="about.html" class="text-primary font-semibold" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.contact">Contact</a>
 <!-- Language Switcher -->
 <div class="lang-dropdown relative">
 <button class="flex items-center space-x-2 text-gray-700 hover:text-primary transition-all duration-300 font-medium">
@@ -123,12 +135,13 @@ color: #374151; font-size: 0.875rem;
 </button>
 <div class="lang-menu">
 <div class="lang-option" onclick="switchLanguage('en')">
-<span class="lang-flag">🇺🇸</span>
+<span class="lang-flag">EN</span>
 <span>English</span>
 </div>
 <div class="lang-option" onclick="switchLanguage('vi')">
-<span class="lang-flag">🇻🇳</span>
+<span class="lang-flag">VI</span>
 <span>Tiếng Việt</span>
+</div>
 </div>
 </div>
 </div>
@@ -161,7 +174,7 @@ My journey, aspirations, and passion for Computer Science
 <div class="md:flex">
 <div class="md:w-1/3 bg-gradient-to-br from-primary to-secondary p-8 flex items-center justify-center">
 <div class="w-48 h-48 rounded-full border-4 border-white shadow-2xl overflow-hidden">
-<img src="https://static.readdy.ai/image/463e20087823e41977ed319075af2fbf/41a55e653710a7f0fda8e5db4410f3cb.png" alt="Gia Tue Vu" class="w-full h-full object-cover object-top">
+<img src="https://lh3.googleusercontent.com/d/1I7CHRcZ8T3VIoka8fbPtgA3z4d2yhoat" alt="Gia Tue Vu" class="w-full h-full object-cover object-top">
 </div>
 </div>
 <div class="md:w-2/3 p-8">
@@ -176,16 +189,13 @@ Computer Science Student | AI Enthusiast | Problem Solver
 </div>
 <div class="flex items-center">
 <i class="ri-graduation-cap-line text-primary mr-2"></i>
-<span>Class of 2026</span>
+<span>Class of 2030</span>
 </div>
-<div class="flex items-center">
-<i class="ri-star-line text-primary mr-2"></i>
-<span>GPA: 9.8/10</span>
+<div class="flex items-center col-span-2">
+<i class="ri-school-line text-primary mr-2"></i>
+<span>HUS High School for Gifted Students, VNU University of Science</span>
 </div>
-<div class="flex items-center">
-<i class="ri-trophy-line text-primary mr-2"></i>
-<span>AP Scholar</span>
-</div>
+
 </div>
 </div>
 </div>
@@ -196,13 +206,19 @@ Computer Science Student | AI Enthusiast | Problem Solver
 <h2 class="text-4xl font-display font-bold mb-8 gradient-text">My Story</h2>
 <div class="prose prose-lg max-w-none">
 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-Hello! I'm <span class="font-semibold text-primary">Gia Tue Vu</span>, currently an 11th-grade Computer Science student at <span class="font-semibold">High School for Gifted Students, VNU University of Science, Hanoi</span>. With a passion for technology from an early age, I chose to specialize in Computer Science to develop deeper expertise in programming and computer science.
+Ever since I first typed <span class="font-semibold">“Hello World,”</span> I’ve been fascinated by how a few lines of code can turn an idea into something real. My decision to major in Computer Science wasn’t just about learning how computers work but about understanding how technology can shape the world we live in.
 </p>
 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-Throughout my academic journey, I have achieved excellent results with a <span class="font-semibold text-primary">GPA of 9.8/10</span> and completed AP courses in Computer Science and Mathematics with <span class="font-semibold text-primary">perfect scores of 5/5</span>. I am particularly interested in <span class="font-semibold">Machine Learning and AI</span>, and aspire to pursue my dream of studying abroad to further develop my skills.
+I’m especially drawn to <span class="font-semibold">Artificial Intelligence</span> and <span class="font-semibold">Machine Learning</span>, where logic meets creativity. I love exploring how machines can learn from data and make sense of patterns that humans might overlook. Each project I work on teaches me not just about algorithms, but about curiosity, persistence, and the beauty of problem-solving.
 </p>
 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-Beyond academics, I'm deeply committed to making a positive impact on my community through various volunteer activities and technology projects. I believe in the power of technology to solve real-world problems and improve lives.
+Beyond academics, I see technology as a bridge by connecting ideas to impact, individuals to communities. Whether it’s volunteering or collaborating on tech initiatives, I’m driven by the belief that innovation should serve people.
+</p>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Now, as an 11th grader at the <span class="font-semibold">High School for Gifted Students under VNU University of Science</span>, I’m driven by a single question: <span class="italic">“How can AI help us build a more sustainable and compassionate world?”</span>
+</p>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Every line of code I write is a step toward that answer.
 </p>
 </div>
 </div>
@@ -211,27 +227,48 @@ Beyond academics, I'm deeply committed to making a positive impact on my communi
 <div class="mb-16 scroll-reveal">
 <h2 class="text-4xl font-display font-bold mb-8 gradient-text">Core Values</h2>
 <div class="grid md:grid-cols-3 gap-6">
-<div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
-<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
-<i class="ri-lightbulb-line text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Innovation</h3>
-<p class="text-gray-600">Always seeking creative solutions to complex problems</p>
-</div>
-<div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
-<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
-<i class="ri-heart-line text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Community</h3>
-<p class="text-gray-600">Dedicated to making positive social impact</p>
-</div>
-<div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
-<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
-<i class="ri-book-line text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Learning</h3>
-<p class="text-gray-600">Continuous growth and knowledge pursuit</p>
-</div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-lightbulb-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Innovation</h3>
+    <p class="text-gray-600">I pursue bold ideas and practical execution, turning constraints into catalysts for new solutions.</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-shield-check-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Resilience</h3>
+    <p class="text-gray-600">I treat setbacks as feedback by iterating with discipline, learning fast, and coming back stronger.</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-user-heart-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Empathy</h3>
+    <p class="text-gray-600">I design with people at the center, translating real needs into thoughtful, accessible technology.</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-compass-3-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Curiosity</h3>
+    <p class="text-gray-600">I explore systems deeply, ask better questions, and continuously refine how things can work better.</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-team-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Leadership through Collaboration</h3>
+    <p class="text-gray-600">I lead by aligning purpose, removing blockers, and building momentum together.</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all">
+    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+      <i class="ri-earth-line text-white text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2">Purpose-Driven Impact</h3>
+    <p class="text-gray-600">I use technology responsibly to create measurable, meaningful benefits for communities and the planet.</p>
+  </div>
 </div>
 </div>
 
@@ -296,7 +333,7 @@ Interested in collaboration or just want to say hello? I'd love to hear from you
 <div class="grid md:grid-cols-3 gap-8">
 <div>
 <a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
-<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<p class="text-gray-400 mb-4" data-i18n="footer.description">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
 <div class="flex space-x-4">
 <a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
 <i class="ri-linkedin-fill text-xl"></i>
@@ -315,19 +352,19 @@ Interested in collaboration or just want to say hello? I'd love to hear from you
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Quick Links</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</h3>
 <div class="space-y-2">
-<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
-<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
-<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
-<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
-<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.home">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Contact</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
 <div class="space-y-2 text-gray-400">
 <p>vgt2800@gmail.com</p>
 <p>(+84) 914 654 745</p>
@@ -336,7 +373,7 @@ Interested in collaboration or just want to say hello? I'd love to hear from you
 </div>
 </div>
 <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+<p data-i18n="footer.copyright">&copy; 2025 Gia Tue Vu. All rights reserved.</p>
 </div>
 </div>
 </footer>
@@ -351,6 +388,110 @@ if (entry.isIntersecting) entry.target.classList.add('revealed');
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 });
 </script>
-</body>
+<script id="i18n-system">
+// Translation data
+const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About Me",
+      awards: "Honors & Awards",
+      projects: "Projects",
+      activities: "Extracurricular Activities",
+      blog: "Blog",
+      contact: "Contact"
+    },
+    about: {
+      title: "About Me",
+      subtitle: "My journey of studying abroad and personal development"
+    },
+    footer: {
+      description: "Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.",
+      quickLinks: "Quick Links",
+      contact: "Contact",
+      copyright: "© 2025 Gia Tue Vu. All rights reserved."
+    }
+  },
+  vi: {
+    nav: {
+      home: "Trang chủ",
+      about: "Về tôi",
+      awards: "Giải thưởng",
+      projects: "Dự án",
+      activities: "Hoạt động ngoại khóa",
+      blog: "Blog",
+      contact: "Liên hệ"
+    },
+    about: {
+      title: "Giới thiệu về tôi",
+      subtitle: "Hành trình học tập và phát triển bản thân"
+    },
+    footer: {
+      description: "Học sinh Khoa học Máy tính đam mê công nghệ và phát triển phần mềm. Luôn sẵn sàng học hỏi và chia sẻ kiến thức.",
+      quickLinks: "Liên kết nhanh",
+      contact: "Liên hệ",
+      copyright: "© 2025 Gia Tue Vu. Bảo lưu mọi quyền."
+    }
+  }
+};
+
+// Get nested translation value
+function getTranslation(obj, path) {
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Switch language function
+function switchLanguage(lang) {
+  // Save preference to localStorage
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+  
+  // Update current language display
+  const currentLangSpan = document.getElementById('currentLang');
+  if (currentLangSpan) {
+    currentLangSpan.textContent = lang.toUpperCase();
+  }
+  
+  // Update all elements with data-i18n attribute
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = getTranslation(translations[lang], key);
+    
+    if (translation) {
+      // Check if translation contains HTML (like icons)
+      if (translation.includes('<')) {
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
+    }
+  });
+  
+  // Update active state in language menu
+  document.querySelectorAll('.lang-option').forEach(option => {
+    option.classList.remove('active');
+  });
+  
+  // Add active class to selected language
+  const selectedOption = Array.from(document.querySelectorAll('.lang-option'))
+    .find(option => option.getAttribute('onclick').includes(`'${lang}'`));
+  
+  if (selectedOption) {
+    selectedOption.classList.add('active');
+  }
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get saved language preference or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  
+  // Apply the language
+  switchLanguage(savedLang);
+});
+</script>\n</body>
 </html>
 

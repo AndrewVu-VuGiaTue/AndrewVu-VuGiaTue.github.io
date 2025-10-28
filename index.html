@@ -144,7 +144,7 @@ background-size: cover;
 
 /* Hero section animations */
 .hero-content > * {
-opacity: 0;
+opacity: 1;
 }
 
 .hero-content.animated > *:nth-child(1) {
@@ -165,8 +165,8 @@ animation: fadeIn 1s ease-out 0.8s forwards;
 
 /* Scroll reveal animation */
 .scroll-reveal {
-opacity: 0;
-transform: translateY(50px);
+opacity: 1;
+transform: translateY(0);
 transition: all 0.8s ease-out;
 }
 
@@ -299,9 +299,9 @@ font-size: 1.25rem;
 <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
 </svg>
 </a>
-<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<a href="https://drive.google.com/uc?export=download&id=1W4qaHpJ-9GXTfVy4KH8r09h_AG8rTLRk" class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap inline-flex items-center" download>
 <i class="ri-download-line mr-2"></i>Download CV
-</button>
+</a>
 </div>
 </div>
 </div>
@@ -328,12 +328,12 @@ font-size: 1.25rem;
 </button>
 <div class="lang-menu">
 <div class="lang-option" onclick="switchLanguage('en')">
-<span class="lang-flag">ðŸ‡ºðŸ‡¸</span>
+<span class="lang-flag">EN</span>
 <span>English</span>
 </div>
 <div class="lang-option" onclick="switchLanguage('vi')">
-<span class="lang-flag">ðŸ‡»ðŸ‡³</span>
-<span>Tiáº¿ng Viá»‡t</span>
+<span class="lang-flag">VI</span>
+<span>Tiếng Việt</span>
 </div>
 </div>
 </div>
@@ -358,7 +358,7 @@ font-size: 1.25rem;
 <div class="space-y-8 hero-content">
 <div class="inline-block">
 <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20">
-👋 Welcome to my portfolio
+👋 Welcome to my personal website
 </span>
 </div>
 <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-tight">
@@ -379,34 +379,20 @@ Passionate about programming, AI technology, and creating positive impacts throu
 </div>
 <div class="flex items-center gap-2">
 <i class="ri-graduation-cap-line text-primary"></i>
-<span>VNU High School</span>
+<span>HUS High School for Gifted Students, VNU University of Science</span>
 </div>
 </div>
 <div class="flex flex-wrap gap-4 pt-4">
-<a href="projects.html" class="btn-hover bg-primary text-white px-8 py-4 !rounded-button hover:bg-secondary transition-all duration-300 whitespace-nowrap font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
-<i class="ri-folder-line mr-2"></i>
-<span data-i18n="hero.viewProjects">View Projects</span>
+<a href="about.html" class="btn-hover bg-primary text-white px-8 py-4 !rounded-button hover:bg-secondary transition-all duration-300 whitespace-nowrap font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
+<i class="ri-user-line mr-2"></i>
+<span>About Me</span>
 </a>
 <a href="contact.html" class="btn-hover border-2 border-primary text-primary px-8 py-4 !rounded-button hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center">
 <i class="ri-mail-line mr-2"></i>
 <span data-i18n="hero.getInTouch">Get in Touch</span>
 </a>
 </div>
-<!-- Quick Stats -->
-<div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-<div class="text-center">
-<div class="text-3xl font-bold gradient-text mb-1">10+</div>
-<div class="text-sm text-gray-600" data-i18n="hero.stats.projects">Projects</div>
-</div>
-<div class="text-center">
-<div class="text-3xl font-bold gradient-text mb-1">5+</div>
-<div class="text-sm text-gray-600" data-i18n="hero.stats.technologies">Technologies</div>
-</div>
-<div class="text-center">
-<div class="text-3xl font-bold gradient-text mb-1">3+</div>
-<div class="text-sm text-gray-600" data-i18n="hero.stats.awards">Awards</div>
-</div>
-</div>
+<!-- Quick Stats removed per request -->
 </div>
 
 <!-- Right: Image -->
@@ -417,7 +403,7 @@ Passionate about programming, AI technology, and creating positive impacts throu
 <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-3xl transform rotate-6 opacity-20"></div>
 <div class="absolute inset-0 bg-gradient-to-br from-accent to-brownSeal rounded-3xl transform -rotate-6 opacity-20"></div>
 <div class="relative bg-white rounded-3xl p-4 shadow-2xl">
-<img src="https://static.readdy.ai/image/463e20087823e41977ed319075af2fbf/41a55e653710a7f0fda8e5db4410f3cb.png" alt="Gia Tue Vu" class="w-full h-full object-cover rounded-2xl">
+<img src="https://lh3.googleusercontent.com/d/16HYusK_eVFzkq2i7SZlkJXwEHtXNoLFx" alt="Gia Tue Vu" class="w-full h-full object-cover rounded-2xl" loading="lazy">
 </div>
 <!-- Floating elements -->
 <div class="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float">
@@ -442,67 +428,107 @@ Passionate about programming, AI technology, and creating positive impacts throu
 </section>
 <!-- Skills Section -->
 <section id="skills" class="py-20 bg-gradient-to-b from-white to-gray-50">
-<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-5xl mx-auto px-6">
 <div class="text-center mb-16 scroll-reveal">
-<h2 class="text-5xl font-display font-bold mb-4 gradient-text" data-i18n="skills.title">Skills & Technologies</h2>
-<p class="text-xl text-gray-600 font-light" data-i18n="skills.subtitle">Technologies I work with and continuously learning</p>
+<h2 class="text-5xl font-display font-bold mb-4 gradient-text" data-i18n="skills.title">Programming Skills</h2>
+<p class="text-xl text-gray-600 font-light" data-i18n="skills.subtitle">My proficiency in various programming languages</p>
 </div>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal">
-<!-- Programming Languages Card -->
-<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-<div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<i class="ri-code-s-slash-line text-white text-2xl"></i>
+<div class="bg-white p-10 rounded-3xl shadow-xl border-2 border-gray-100 scroll-reveal">
+<div class="space-y-8">
+<!-- Python -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-code-s-slash-line text-white text-xl"></i>
 </div>
-<h3 class="text-xl font-semibold mb-6 text-gray-800">Programming</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">Python</span>
-<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">Java</span>
-<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">JavaScript</span>
-<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">C++</span>
-<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors">SQL</span>
+<span class="text-lg font-semibold text-gray-800">Python</span>
 </div>
+<span class="text-2xl font-bold gradient-text">95%</span>
 </div>
-<!-- Web Development Card -->
-<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-<div class="w-16 h-16 bg-gradient-to-br from-accent to-brownSeal rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<i class="ri-global-line text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-6 text-gray-800">Web Dev</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">React</span>
-<span class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">Node.js</span>
-<span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-200 hover:bg-purple-100 transition-colors">MongoDB</span>
-<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">HTML/CSS</span>
-<span class="px-4 py-2 bg-cyan-50 text-cyan-700 rounded-full text-sm font-medium border border-cyan-200 hover:bg-cyan-100 transition-colors">Tailwind</span>
-</div>
-</div>
-<!-- AI & Machine Learning Card -->
-<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-<div class="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<i class="ri-brain-line text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-6 text-gray-800">AI & ML</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">TensorFlow</span>
-<span class="px-4 py-2 bg-red-50 text-red-700 rounded-full text-sm font-medium border border-red-200 hover:bg-red-100 transition-colors">PyTorch</span>
-<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">Scikit-learn</span>
-<span class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">Pandas</span>
-<span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-200 hover:bg-purple-100 transition-colors">NumPy</span>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="95"></div>
 </div>
 </div>
 
-<!-- Tools & Others Card -->
-<div class="group bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-<div class="w-16 h-16 bg-gradient-to-br from-primary/80 to-accent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<i class="ri-tools-line text-white text-2xl"></i>
+<!-- Java -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-cup-line text-white text-xl"></i>
 </div>
-<h3 class="text-xl font-semibold mb-6 text-gray-800">Tools</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-200 transition-colors">Git</span>
-<span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-200 transition-colors">GitHub</span>
-<span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">VS Code</span>
-<span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">Jupyter</span>
-<span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium border border-indigo-200 hover:bg-indigo-100 transition-colors">Docker</span>
+<span class="text-lg font-semibold text-gray-800">Java</span>
+</div>
+<span class="text-2xl font-bold gradient-text">95%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="95"></div>
+</div>
+</div>
+
+<!-- C/C++ -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-terminal-box-line text-white text-xl"></i>
+</div>
+<span class="text-lg font-semibold text-gray-800">C/C++</span>
+</div>
+<span class="text-2xl font-bold gradient-text">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="90"></div>
+</div>
+</div>
+
+<!-- JavaScript -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-javascript-line text-white text-xl"></i>
+</div>
+<span class="text-lg font-semibold text-gray-800">JavaScript</span>
+</div>
+<span class="text-2xl font-bold gradient-text">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="85"></div>
+</div>
+</div>
+
+<!-- HTML/CSS -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-html5-line text-white text-xl"></i>
+</div>
+<span class="text-lg font-semibold text-gray-800">HTML/CSS</span>
+</div>
+<span class="text-2xl font-bold gradient-text">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="80"></div>
+</div>
+</div>
+
+<!-- PHP -->
+<div class="skill-item group">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<i class="ri-php-line text-white text-xl"></i>
+</div>
+<span class="text-lg font-semibold text-gray-800">PHP</span>
+</div>
+<span class="text-2xl font-bold gradient-text">60%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+<div class="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="60"></div>
+</div>
 </div>
 </div>
 </div>
@@ -513,7 +539,7 @@ Passionate about programming, AI technology, and creating positive impacts throu
 <div class="grid md:grid-cols-3 gap-8">
 <div>
 <a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
-<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<p class="text-gray-400 mb-4" data-i18n="footer.description">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
 <div class="flex space-x-4">
 <a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
 <i class="ri-linkedin-fill text-xl"></i>
@@ -532,19 +558,19 @@ Passionate about programming, AI technology, and creating positive impacts throu
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Quick Links</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</h3>
 <div class="space-y-2">
-<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
-<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
-<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
-<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
-<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.home">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Contact</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
 <div class="space-y-2 text-gray-400">
 <p>vgt2800@gmail.com</p>
 <p>(+84) 914 654 745</p>
@@ -553,7 +579,7 @@ Passionate about programming, AI technology, and creating positive impacts throu
 </div>
 </div>
 <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+<p data-i18n="footer.copyright">&copy; 2025 Gia Tue Vu. All rights reserved.</p>
 </div>
 </div>
 </footer>
@@ -596,6 +622,16 @@ const observer = new IntersectionObserver(function(entries) {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
 entry.target.classList.add('revealed');
+// Animate progress bars when skills section is visible
+if (entry.target.id === 'skills') {
+const progressBars = entry.target.querySelectorAll('.skill-item .bg-gradient-to-r');
+progressBars.forEach((bar, index) => {
+setTimeout(() => {
+const targetWidth = bar.getAttribute('data-target');
+bar.style.width = targetWidth + '%';
+}, index * 200);
+});
+}
 }
 });
 }, observerOptions);
@@ -682,7 +718,15 @@ const translations = {
     },
     hero: {
       greeting: "Greetings from Hanoi, Vietnam!",
-      subtitle: "Computer Science student at High School for Gifted Students, VNU University of Science. Passionate about programming, AI technology, and creating positive impacts on our community.",
+      role: "Computer Science Student",
+      subtitle: "Passionate about programming, AI technology, and creating positive impacts through code",
+      viewProjects: "View Projects",
+      getInTouch: "Get in Touch",
+      stats: {
+        projects: "Projects",
+        technologies: "Technologies",
+        awards: "Awards"
+      },
       exploreBtn: "<i class='ri-file-text-line mr-2'></i>Explore More",
       contactBtn: "<i class='ri-mail-line mr-2'></i>Get in Touch",
       scrollDown: "Scroll Down"
@@ -694,8 +738,8 @@ const translations = {
       paragraph2: "Throughout my academic journey, I have achieved excellent results with a GPA of 9.8/10 and completed AP courses in Computer Science and Mathematics with perfect scores. I am particularly interested in Machine Learning and AI, and aspire to pursue my dream of studying abroad to further develop my skills."
     },
     skills: {
-      title: "Skills & Technologies",
-      subtitle: "Technologies I've learned and used"
+      title: "Programming Skills",
+      subtitle: "My proficiency in various programming languages"
     },
     projects: {
       title: "Featured Projects",
@@ -708,6 +752,12 @@ const translations = {
     contact: {
       title: "Get In Touch",
       subtitle: "Let's connect and discuss technology"
+    },
+    footer: {
+      description: "Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.",
+      quickLinks: "Quick Links",
+      contact: "Contact",
+      copyright: "© 2025 Gia Tue Vu. All rights reserved."
     }
   },
   vi: {
@@ -721,33 +771,47 @@ const translations = {
       contact: "Liên hệ"
     },
     hero: {
-      greeting: "Xin chÃ o tá»« HÃ  Ná»™i, Viá»‡t Nam!",
-      subtitle: "Há»c sinh chuyÃªn Tin há»c táº¡i TrÆ°á»ng THPT chuyÃªn Äáº¡i há»c Khoa há»c Tá»± nhiÃªn, HÃ  Ná»™i. Äam mÃª láº­p trÃ¬nh, cÃ´ng nghá»‡ AI vÃ  táº¡o ra nhá»¯ng tÃ¡c Ä‘á»™ng tÃ­ch cá»±c cho cá»™ng Ä‘á»“ng.",
-      exploreBtn: "<i class='ri-file-text-line mr-2'></i>KhÃ¡m phÃ¡ thÃªm",
-      contactBtn: "<i class='ri-mail-line mr-2'></i>LiÃªn há»‡ ngay",
-      scrollDown: "Cuá»™n xuá»‘ng"
+      greeting: "Xin chào từ Hà Nội, Việt Nam!",
+      role: "Học sinh Khoa học Máy tính",
+      subtitle: "Đam mê lập trình, công nghệ AI và tạo ra những tác động tích cực thông qua code",
+      viewProjects: "Xem Dự án",
+      getInTouch: "Liên hệ",
+      stats: {
+        projects: "Dự án",
+        technologies: "Công nghệ",
+        awards: "Giải thưởng"
+      },
+      exploreBtn: "<i class='ri-file-text-line mr-2'></i>Khám phá thêm",
+      contactBtn: "<i class='ri-mail-line mr-2'></i>Liên hệ ngay",
+      scrollDown: "Cuộn xuống"
     },
     about: {
-      title: "Giá»›i thiá»‡u vá» tÃ´i",
-      subtitle: "HÃ nh trÃ¬nh du há»c vÃ  phÃ¡t triá»ƒn báº£n thÃ¢n",
-      paragraph1: "Xin chÃ o! TÃ´i lÃ  Gia Tue Vu, hiá»‡n Ä‘ang lÃ  há»c sinh lá»›p 11 chuyÃªn Tin há»c táº¡i TrÆ°á»ng THPT chuyÃªn Äáº¡i há»c Khoa há»c Tá»± nhiÃªn, HÃ  Ná»™i. Vá»›i niá»m Ä‘am mÃª cÃ´ng nghá»‡ tá»« nhá», tÃ´i Ä‘Ã£ chá»n con Ä‘Æ°á»ng há»c chuyÃªn Tin Ä‘á»ƒ cÃ³ thá»ƒ phÃ¡t triá»ƒn sÃ¢u hÆ¡n trong lÄ©nh vá»±c láº­p trÃ¬nh vÃ  khoa há»c mÃ¡y tÃ­nh.",
-      paragraph2: "Trong quÃ¡ trÃ¬nh há»c táº­p, tÃ´i Ä‘Ã£ Ä‘áº¡t Ä‘Æ°á»£c nhiá»u thÃ nh tÃ­ch tá»‘t vá»›i GPA 9.8/10 vÃ  hoÃ n thÃ nh xuáº¥t sáº¯c cÃ¡c khÃ³a há»c AP vá» Computer Science vÃ  ToÃ¡n há»c. TÃ´i Ä‘áº·c biá»‡t quan tÃ¢m Ä‘áº¿n lÄ©nh vá»±c Machine Learning, AI vÃ  mong muá»‘n theo Ä‘uá»•i giáº¥c mÆ¡ du há»c Ä‘á»ƒ cÃ³ cÆ¡ há»™i phÃ¡t triá»ƒn hÆ¡n ná»¯a."
+      title: "Giới thiệu về tôi",
+      subtitle: "Hành trình học tập và phát triển bản thân",
+      paragraph1: "Xin chào! Tôi là Gia Tue Vu, hiện đang là học sinh lớp 11 chuyên Tin học tại Trường THPT chuyên Đại học Khoa học Tự nhiên, Hà Nội. Với niềm đam mê công nghệ từ nhỏ, tôi đã chọn con đường học chuyên Tin để có thể phát triển sâu hơn trong lĩnh vực lập trình và khoa học máy tính.",
+      paragraph2: "Trong quá trình học tập, tôi đã đạt được nhiều thành tích tốt và hoàn thành xuất sắc các khóa học về Computer Science và Toán học. Tôi đặc biệt quan tâm đến lĩnh vực Machine Learning, AI và mong muốn theo đuổi giấc mơ du học để có cơ hội phát triển hơn nữa."
     },
     skills: {
-      title: "Ká»¹ nÄƒng & CÃ´ng nghá»‡",
-      subtitle: "Nhá»¯ng cÃ´ng nghá»‡ tÃ´i Ä‘Ã£ há»c vÃ  sá»­ dá»¥ng"
+      title: "Kỹ năng Lập trình",
+      subtitle: "Trình độ thành thạo các ngôn ngữ lập trình"
     },
     projects: {
-      title: "Dá»± Ã¡n ná»•i báº­t",
-      subtitle: "Nhá»¯ng dá»± Ã¡n tÃ´i Ä‘Ã£ thá»±c hiá»‡n trong quÃ¡ trÃ¬nh há»c táº­p"
+      title: "Dự án nổi bật",
+      subtitle: "Những dự án tôi đã thực hiện trong quá trình học tập"
     },
     blog: {
-      title: "Blog & BÃ i viáº¿t",
-      subtitle: "Chia sáº» kinh nghiá»‡m vÃ  kiáº¿n thá»©c"
+      title: "Blog & Bài viết",
+      subtitle: "Chia sẻ kinh nghiệm và kiến thức"
     },
     contact: {
-      title: "LiÃªn há»‡ vá»›i tÃ´i",
-      subtitle: "HÃ£y káº¿t ná»‘i vÃ  tháº£o luáº­n vá» cÃ´ng nghá»‡"
+      title: "Liên hệ với tôi",
+      subtitle: "Hãy kết nối và thảo luận về công nghệ"
+    },
+    footer: {
+      description: "Học sinh Khoa học Máy tính đam mê công nghệ và phát triển phần mềm. Luôn sẵn sàng học hỏi và chia sẻ kiến thức.",
+      quickLinks: "Liên kết nhanh",
+      contact: "Liên hệ",
+      copyright: "© 2025 Gia Tue Vu. Bảo lưu mọi quyền."
     }
   }
 };

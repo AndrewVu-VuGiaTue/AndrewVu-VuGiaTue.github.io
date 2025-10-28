@@ -12,7 +12,8 @@ tailwind.config = {
 theme: {
 extend: {
 colors: { primary: '#B31B1B', secondary: '#C00404', accent: '#653819', brownSeal: '#4E3629' },
-fontFamily: { 'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], 'display': ['Playfair Display', 'Georgia', 'serif'], 'script': ['Pacifico', 'cursive'] }
+fontFamily: { 'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], 'display': ['Playfair Display', 'Georgia', 'serif'], 'script': ['Pacifico', 'cursive'] },
+borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' }
 }
 }
 }
@@ -76,9 +77,9 @@ color: #374151; font-size: 0.875rem;
 <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
 </svg>
 </a>
-<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<a href="https://drive.google.com/uc?export=download&id=1W4qaHpJ-9GXTfVy4KH8r09h_AG8rTLRk" class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap inline-flex items-center" download>
 <i class="ri-download-line mr-2"></i>Download CV
-</button>
+</a>
 </div>
 </div>
 </div>
@@ -89,7 +90,7 @@ color: #374151; font-size: 0.875rem;
 <div class="max-w-7xl mx-auto flex items-center justify-between">
 <a href="index.html" class="font-script text-2xl text-primary hover:opacity-80 transition-opacity">Gia Tue Vu</a>
 <div class="hidden md:flex items-center space-x-6">
-<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Home</a>
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.home">Home</a>
 <a href="about.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">About Me</a>
 <a href="awards.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Honors & Awards</a>
 <a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Projects</a>
@@ -105,12 +106,13 @@ color: #374151; font-size: 0.875rem;
 </button>
 <div class="lang-menu">
 <div class="lang-option" onclick="switchLanguage('en')">
-<span class="lang-flag">🇺🇸</span>
+<span class="lang-flag">EN</span>
 <span>English</span>
 </div>
 <div class="lang-option" onclick="switchLanguage('vi')">
-<span class="lang-flag">🇻🇳</span>
+<span class="lang-flag">VI</span>
 <span>Tiếng Việt</span>
+</div>
 </div>
 </div>
 </div>
@@ -371,7 +373,7 @@ Managed technical infrastructure for environmental sustainability project. Devel
 <div class="grid md:grid-cols-3 gap-8">
 <div>
 <a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
-<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<p class="text-gray-400 mb-4" data-i18n="footer.description">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
 <div class="flex space-x-4">
 <a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
 <i class="ri-linkedin-fill text-xl"></i>
@@ -390,19 +392,19 @@ Managed technical infrastructure for environmental sustainability project. Devel
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Quick Links</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</h3>
 <div class="space-y-2">
-<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
-<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
-<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
-<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
-<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.home">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Contact</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
 <div class="space-y-2 text-gray-400">
 <p>vgt2800@gmail.com</p>
 <p>(+84) 914 654 745</p>
@@ -411,7 +413,7 @@ Managed technical infrastructure for environmental sustainability project. Devel
 </div>
 </div>
 <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+<p data-i18n="footer.copyright">&copy; 2025 Gia Tue Vu. All rights reserved.</p>
 </div>
 </div>
 </footer>
@@ -426,6 +428,110 @@ if (entry.isIntersecting) entry.target.classList.add('revealed');
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 });
 </script>
-</body>
+<script id="i18n-system">
+// Translation data
+const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About Me",
+      awards: "Honors & Awards",
+      projects: "Projects",
+      activities: "Extracurricular Activities",
+      blog: "Blog",
+      contact: "Contact"
+    },
+    activities: {
+      title: "Extracurricular Activities",
+      subtitle: "Community involvement and personal development"
+    },
+    footer: {
+      description: "Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.",
+      quickLinks: "Quick Links",
+      contact: "Contact",
+      copyright: "© 2025 Gia Tue Vu. All rights reserved."
+    }
+  },
+  vi: {
+    nav: {
+      home: "Trang chủ",
+      about: "Về tôi",
+      awards: "Giải thưởng",
+      projects: "Dự án",
+      activities: "Hoạt động ngoại khóa",
+      blog: "Blog",
+      contact: "Liên hệ"
+    },
+    activities: {
+      title: "Hoạt động ngoại khóa",
+      subtitle: "Tham gia cộng đồng và phát triển bản thân"
+    },
+    footer: {
+      description: "Học sinh Khoa học Máy tính đam mê công nghệ và phát triển phần mềm. Luôn sẵn sàng học hỏi và chia sẻ kiến thức.",
+      quickLinks: "Liên kết nhanh",
+      contact: "Liên hệ",
+      copyright: "© 2025 Gia Tue Vu. Bảo lưu mọi quyền."
+    }
+  }
+};
+
+// Get nested translation value
+function getTranslation(obj, path) {
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Switch language function
+function switchLanguage(lang) {
+  // Save preference to localStorage
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+  
+  // Update current language display
+  const currentLangSpan = document.getElementById('currentLang');
+  if (currentLangSpan) {
+    currentLangSpan.textContent = lang.toUpperCase();
+  }
+  
+  // Update all elements with data-i18n attribute
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = getTranslation(translations[lang], key);
+    
+    if (translation) {
+      // Check if translation contains HTML (like icons)
+      if (translation.includes('<')) {
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
+    }
+  });
+  
+  // Update active state in language menu
+  document.querySelectorAll('.lang-option').forEach(option => {
+    option.classList.remove('active');
+  });
+  
+  // Add active class to selected language
+  const selectedOption = Array.from(document.querySelectorAll('.lang-option'))
+    .find(option => option.getAttribute('onclick').includes(`'${lang}'`));
+  
+  if (selectedOption) {
+    selectedOption.classList.add('active');
+  }
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get saved language preference or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  
+  // Apply the language
+  switchLanguage(savedLang);
+});
+</script>\n</body>
 </html>
 

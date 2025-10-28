@@ -21,6 +21,18 @@ fontFamily: {
 'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 'display': ['Playfair Display', 'Georgia', 'serif'],
 'script': ['Pacifico', 'cursive']
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
 }
 }
 }
@@ -93,9 +105,9 @@ color: #374151; font-size: 0.875rem;
 <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
 </svg>
 </a>
-<button class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">
+<a href="https://drive.google.com/uc?export=download&id=1W4qaHpJ-9GXTfVy4KH8r09h_AG8rTLRk" class="bg-primary text-white px-4 py-1 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap inline-flex items-center" download>
 <i class="ri-download-line mr-2"></i>Download CV
-</button>
+</a>
 </div>
 </div>
 </div>
@@ -106,7 +118,7 @@ color: #374151; font-size: 0.875rem;
 <div class="max-w-7xl mx-auto flex items-center justify-between">
 <a href="index.html" class="font-script text-2xl text-primary hover:opacity-80 transition-opacity">Gia Tue Vu</a>
 <div class="hidden md:flex items-center space-x-6">
-<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Home</a>
+<a href="index.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium" data-i18n="nav.home">Home</a>
 <a href="about.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">About Me</a>
 <a href="awards.html" class="text-primary font-semibold">Honors & Awards</a>
 <a href="projects.html" class="text-gray-700 hover:text-primary transition-all duration-300 font-medium">Projects</a>
@@ -122,12 +134,13 @@ color: #374151; font-size: 0.875rem;
 </button>
 <div class="lang-menu">
 <div class="lang-option" onclick="switchLanguage('en')">
-<span class="lang-flag">🇺🇸</span>
+<span class="lang-flag">EN</span>
 <span>English</span>
 </div>
 <div class="lang-option" onclick="switchLanguage('vi')">
-<span class="lang-flag">🇻🇳</span>
+<span class="lang-flag">VI</span>
 <span>Tiếng Việt</span>
+</div>
 </div>
 </div>
 </div>
@@ -177,7 +190,7 @@ Recognition for academic excellence, innovation, and leadership
 </div>
 </div>
 
-<!-- Gold Medal -->
+<!-- 1I1W Gold -->
 <div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 border-4 border-amber-400 relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400 rounded-full -mr-16 -mt-16 opacity-20"></div>
 <div class="relative z-10">
@@ -193,98 +206,322 @@ Recognition for academic excellence, innovation, and leadership
 </div>
 </div>
 </div>
+
+<!-- HKICO Gold -->
+<div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 border-4 border-amber-400 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-amber-400 rounded-full -mr-16 -mt-16 opacity-20"></div>
+<div class="relative z-10">
+<div class="w-20 h-20 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+<i class="ri-medal-fill text-white text-3xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3 text-gray-900">Gold Medal</h3>
+<p class="text-lg font-semibold text-primary mb-2">Hong Kong International Computational Olympiad (HKICO)</p>
+<p class="text-gray-700 mb-4">International Level</p>
+<div class="flex items-center text-sm text-gray-600">
+<i class="ri-global-line mr-2 text-amber-600"></i>
+<span class="font-medium">International Competition</span>
+</div>
 </div>
 </div>
 
-<!-- Academic Excellence -->
-<div class="mb-20 scroll-reveal">
-<h2 class="text-4xl font-display font-bold mb-12 gradient-text">Academic Excellence</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="bg-white rounded-xl shadow-lg border-2 border-primary/20 p-6 hover:border-primary/40 transition-all">
-<div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-4">
-<i class="ri-star-fill text-white text-2xl"></i>
+<!-- HKIMO Gold -->
+<div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 border-4 border-amber-400 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-amber-400 rounded-full -mr-16 -mt-16 opacity-20"></div>
+<div class="relative z-10">
+<div class="w-20 h-20 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+<i class="ri-medal-fill text-white text-3xl"></i>
 </div>
-<h3 class="text-xl font-bold mb-2">Perfect GPA</h3>
-<p class="text-2xl font-bold text-primary mb-2">9.8/10</p>
-<p class="text-gray-600">Consistently high academic performance throughout all semesters</p>
+<h3 class="text-2xl font-bold mb-3 text-gray-900">Gold Medal</h3>
+<p class="text-lg font-semibold text-primary mb-2">Hong Kong International Mathematical Olympiad (HKIMO)</p>
+<p class="text-gray-700 mb-4">International Level</p>
+<div class="flex items-center text-sm text-gray-600">
+<i class="ri-global-line mr-2 text-amber-600"></i>
+<span class="font-medium">International Competition</span>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<div class="bg-white rounded-xl shadow-lg border-2 border-primary/20 p-6 hover:border-primary/40 transition-all">
-<div class="w-16 h-16 bg-gradient-to-br from-accent to-brownSeal rounded-full flex items-center justify-center mb-4">
-<i class="ri-award-fill text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">AP Scholar</h3>
-<p class="text-2xl font-bold text-primary mb-2">5/5 Scores</p>
-<p class="text-gray-600">Perfect scores in AP Computer Science and Mathematics</p>
-</div>
-
-<div class="bg-white rounded-xl shadow-lg border-2 border-primary/20 p-6 hover:border-primary/40 transition-all">
-<div class="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mb-4">
-<i class="ri-graduation-cap-fill text-white text-2xl"></i>
-</div>
-<h3 class="text-xl font-bold mb-2">Top Student</h3>
-<p class="text-2xl font-bold text-primary mb-2">Top 5%</p>
-<p class="text-gray-600">Among students at High School for Gifted Students</p>
-</div>
-</div>
-</div>
+<!-- Academic Excellence removed per request -->
 
 <!-- Competition Awards -->
 <div class="mb-20 scroll-reveal">
 <h2 class="text-4xl font-display font-bold mb-12 gradient-text">Competition Awards</h2>
+
+<div class="space-y-10">
+  <!-- Category: Computer Science & Innovation -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white">
+        <i class="ri-cpu-line"></i>
+      </div>
+      <h3 class="text-2xl font-display font-bold">Computer Science & Innovation</h3>
+    </div>
+    <div class="space-y-6">
+      <!-- International first -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-trophy-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Grand Prix Award</h4>
+            <p class="text-primary font-semibold mb-1">Advanced Innovation Global Competition (AIGC)</p>
+            <p class="text-gray-600 mb-2">Singapore, 2025</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Grand Prix</span>
+            </div>
+          </div>
+          <a href="assets/certificates/aigc-grand-prix.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">1 IDEA 1 WORLD Competition</p>
+            <p class="text-gray-600 mb-2">International Innovation Competition, 2025</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/1i1w-gold.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <!-- INOVA 2025 Croatia -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Award</h4>
+            <p class="text-primary font-semibold mb-1">International Invention Show (INOVA)</p>
+            <p class="text-gray-600 mb-2">Croatia, 2025</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/inova-2025-gold.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+      <!-- HKICO - move to CS & Innovation -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Hong Kong International Computational Olympiad (HKICO)</p>
+            <p class="text-gray-600 mb-2">International Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/hkico-international.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <!-- HKICO National -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Hong Kong International Computational Olympiad (HKICO)</p>
+            <p class="text-gray-600 mb-2">National Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/hkico-national.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category: Mathematics Competitions -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-10 h-10 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center text-white">
+        <i class="ri-calculator-line"></i>
+      </div>
+      <h3 class="text-2xl font-display font-bold">Mathematics Competitions</h3>
+    </div>
+    <div class="space-y-6">
+      <!-- International level -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Hong Kong International Mathematical Olympiad (HKIMO)</p>
+            <p class="text-gray-600 mb-2">International Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/hkimo-international.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      
+
+      
+
+      <!-- National level -->
+      <!-- HKIMO National -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Hong Kong International Mathematical Olympiad (HKIMO)</p>
+            <p class="text-gray-600 mb-2">National Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/hkimo-national.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Cambodia International Mathematical Olympiad Champion (CIMOC)</p>
+            <p class="text-gray-600 mb-2">National Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/cimoc-national.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Gold Medal</h4>
+            <p class="text-primary font-semibold mb-1">Southeast Asian Mathematical Olympiad (IMOCSEA)</p>
+            <p class="text-gray-600 mb-2">National Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
+            </div>
+          </div>
+          <a href="assets/certificates/imocsea-national.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-gray-500 to-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-medal-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Silver Medal</h4>
+            <p class="text-primary font-semibold mb-1">Copernicus International Mathematical Olympiad (CIMO)</p>
+            <p class="text-gray-600 mb-2">National Round</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">Silver</span>
+            </div>
+          </div>
+          <a href="assets/certificates/cimo-national.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <!-- School level: Exploration & Creativity in Mathematics 2024 -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-award-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Third Prize</h4>
+            <p class="text-primary font-semibold mb-1">Exploration and Creativity Contest in Mathematics 2024</p>
+            <p class="text-gray-600 mb-2">Research project published in an official mathematics book</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">School Level</span>
+              <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-medium">Third Prize</span>
+            </div>
+          </div>
+          <a href="assets/certificates/exploration-creativity-2024.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+
+      <!-- District level -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="ri-award-line text-white text-xl"></i>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xl font-bold mb-2">Third Prize</h4>
+            <p class="text-primary font-semibold mb-1">District-Level Mathematics Contest (Grade 9)</p>
+            <p class="text-gray-600 mb-2">Recognized for excellence in mathematical problem-solving at district level</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">District</span>
+              <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-medium">Third Prize</span>
+            </div>
+          </div>
+          <a href="assets/certificates/district-third.pdf" target="_blank" class="ml-auto inline-flex items-center text-primary hover:text-secondary font-medium whitespace-nowrap">View Details <i class="ri-arrow-right-up-line ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Honors -->
+<div class="mb-20 scroll-reveal">
+<h2 class="text-4xl font-display font-bold mb-12 gradient-text">Honors</h2>
 <div class="space-y-6">
-<!-- Award Item -->
-<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
-<div class="flex items-start gap-4">
-<div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-<i class="ri-trophy-line text-white text-xl"></i>
-</div>
-<div class="flex-1">
-<h3 class="text-xl font-bold mb-2">Grand Prix Award</h3>
-<p class="text-primary font-semibold mb-1">Advanced Innovation Global Competition (AIGC)</p>
-<p class="text-gray-600 mb-2">Singapore, 2025</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
-<span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Grand Prix</span>
-</div>
-</div>
-</div>
-</div>
-
-<!-- More awards -->
-<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
-<div class="flex items-start gap-4">
-<div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
-<i class="ri-medal-line text-white text-xl"></i>
-</div>
-<div class="flex-1">
-<h3 class="text-xl font-bold mb-2">Gold Medal</h3>
-<p class="text-primary font-semibold mb-1">1 IDEA 1 WORLD Competition</p>
-<p class="text-gray-600 mb-2">International Innovation Competition, 2025</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">International</span>
-<span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Gold</span>
-</div>
-</div>
-</div>
-</div>
-
-<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
-<div class="flex items-start gap-4">
-<div class="w-14 h-14 bg-gradient-to-br from-accent to-brownSeal rounded-lg flex items-center justify-center flex-shrink-0">
-<i class="ri-award-line text-white text-xl"></i>
-</div>
-<div class="flex-1">
-<h3 class="text-xl font-bold mb-2">First Prize</h3>
-<p class="text-primary font-semibold mb-1">National Science and Technology Competition</p>
-<p class="text-gray-600 mb-2">Vietnam, 2024</p>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">National</span>
-<span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-medium">First Prize</span>
-</div>
-</div>
-</div>
-</div>
+  <!-- AP Scholar -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all">
+    <div class="flex items-start gap-4">
+      <div class="w-14 h-14 bg-gradient-to-br from-accent to-brownSeal rounded-lg flex items-center justify-center flex-shrink-0">
+        <i class="ri-award-line text-white text-xl"></i>
+      </div>
+      <div class="flex-1">
+        <h3 class="text-xl font-bold mb-2">AP Scholar</h3>
+        <p class="text-primary font-semibold mb-1">College Board Advanced Placement</p>
+        <p class="text-gray-600 mb-2">Perfect scores in AP Computer Science and Mathematics</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">Honor</span>
+          <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Academic</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -301,12 +538,12 @@ Recognition for academic excellence, innovation, and leadership
 <p class="text-lg opacity-90">International</p>
 </div>
 <div>
-<div class="text-5xl font-bold mb-2">9.8</div>
-<p class="text-lg opacity-90">GPA Score</p>
+<div class="text-5xl font-bold mb-2">9</div>
+<p class="text-lg opacity-90">Gold Awards</p>
 </div>
 <div>
-<div class="text-5xl font-bold mb-2">100%</div>
-<p class="text-lg opacity-90">AP Scores</p>
+<div class="text-5xl font-bold mb-2">4+</div>
+<p class="text-lg opacity-90">Honors</p>
 </div>
 </div>
 </div>
@@ -336,7 +573,7 @@ Recognition for academic excellence, innovation, and leadership
 <div class="grid md:grid-cols-3 gap-8">
 <div>
 <a href="index.html" class="font-script text-2xl text-primary mb-4 inline-block hover:opacity-80 transition-opacity">Gia Tue Vu</a>
-<p class="text-gray-400 mb-4">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
+<p class="text-gray-400 mb-4" data-i18n="footer.description">Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.</p>
 <div class="flex space-x-4">
 <a href="https://www.linkedin.com/in/gia-tue-vu-292982348/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
 <i class="ri-linkedin-fill text-xl"></i>
@@ -355,19 +592,19 @@ Recognition for academic excellence, innovation, and leadership
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Quick Links</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</h3>
 <div class="space-y-2">
-<a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
-<a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Me</a>
-<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors">Honors & Awards</a>
-<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors">Extracurricular Activities</a>
-<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
-<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+<a href="index.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.home">Home</a>
+<a href="about.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.about">About Me</a>
+<a href="awards.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.awards">Honors & Awards</a>
+<a href="projects.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.projects">Projects</a>
+<a href="activities.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.activities">Extracurricular Activities</a>
+<a href="blog.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.blog">Blog</a>
+<a href="contact.html" class="block text-gray-400 hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
 </div>
 </div>
 <div>
-<h3 class="font-semibold mb-4">Contact</h3>
+<h3 class="font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
 <div class="space-y-2 text-gray-400">
 <p>vgt2800@gmail.com</p>
 <p>(+84) 914 654 745</p>
@@ -376,7 +613,7 @@ Recognition for academic excellence, innovation, and leadership
 </div>
 </div>
 <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-<p>&copy; 2025 Gia Tue Vu. All rights reserved.</p>
+<p data-i18n="footer.copyright">&copy; 2025 Gia Tue Vu. All rights reserved.</p>
 </div>
 </div>
 </footer>
@@ -391,6 +628,110 @@ if (entry.isIntersecting) entry.target.classList.add('revealed');
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 });
 </script>
-</body>
+<script id="i18n-system">
+// Translation data
+const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About Me",
+      awards: "Honors & Awards",
+      projects: "Projects",
+      activities: "Extracurricular Activities",
+      blog: "Blog",
+      contact: "Contact"
+    },
+    awards: {
+      title: "Honors & Awards",
+      subtitle: "Recognition and achievements throughout my academic journey"
+    },
+    footer: {
+      description: "Computer Science student passionate about technology and software development. Always ready to learn and share knowledge.",
+      quickLinks: "Quick Links",
+      contact: "Contact",
+      copyright: "© 2025 Gia Tue Vu. All rights reserved."
+    }
+  },
+  vi: {
+    nav: {
+      home: "Trang chủ",
+      about: "Về tôi",
+      awards: "Giải thưởng",
+      projects: "Dự án",
+      activities: "Hoạt động ngoại khóa",
+      blog: "Blog",
+      contact: "Liên hệ"
+    },
+    awards: {
+      title: "Giải thưởng & Danh hiệu",
+      subtitle: "Những thành tích đạt được trong quá trình học tập"
+    },
+    footer: {
+      description: "Học sinh Khoa học Máy tính đam mê công nghệ và phát triển phần mềm. Luôn sẵn sàng học hỏi và chia sẻ kiến thức.",
+      quickLinks: "Liên kết nhanh",
+      contact: "Liên hệ",
+      copyright: "© 2025 Gia Tue Vu. Bảo lưu mọi quyền."
+    }
+  }
+};
+
+// Get nested translation value
+function getTranslation(obj, path) {
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Switch language function
+function switchLanguage(lang) {
+  // Save preference to localStorage
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+  
+  // Update current language display
+  const currentLangSpan = document.getElementById('currentLang');
+  if (currentLangSpan) {
+    currentLangSpan.textContent = lang.toUpperCase();
+  }
+  
+  // Update all elements with data-i18n attribute
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = getTranslation(translations[lang], key);
+    
+    if (translation) {
+      // Check if translation contains HTML (like icons)
+      if (translation.includes('<')) {
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
+    }
+  });
+  
+  // Update active state in language menu
+  document.querySelectorAll('.lang-option').forEach(option => {
+    option.classList.remove('active');
+  });
+  
+  // Add active class to selected language
+  const selectedOption = Array.from(document.querySelectorAll('.lang-option'))
+    .find(option => option.getAttribute('onclick').includes(`'${lang}'`));
+  
+  if (selectedOption) {
+    selectedOption.classList.add('active');
+  }
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get saved language preference or default to English
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  
+  // Apply the language
+  switchLanguage(savedLang);
+});
+</script>\n</body>
 </html>
 
